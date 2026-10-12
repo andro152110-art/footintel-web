@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="FootIntel: análisis y estadísticas de fútbol para tomar decisiones informadas.">
+  <title>FootIntel | Football Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FootIntel inicio">
+      <span class="brand-mark">FI</span>
+      <span><strong>FootIntel</strong><small>FOOTBALL INTELLIGENCE</small></span>
+    </a>
+    <nav>
+      <a class="active" href="#partidos">Partidos</a>
+      <a href="#analisis">Análisis</a>
+      <a href="#crear">Crear apuesta</a>
+    </nav>
+    <button class="menu-button" id="menuButton" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> DATOS · CONTEXTO · ANÁLISIS</div>
+        <h1>Analiza el juego.<br><span>Entiende los datos.</span></h1>
+        <p>Una nueva forma de explorar el fútbol, comparar equipos y estudiar mercados con más contexto.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#partidos">Explorar partidos <span>↗</span></a>
+          <a class="button button-ghost" href="#analisis">Cómo funciona</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-top"><span>FOOTINTEL / DASHBOARD</span><span class="status-pill">VERSIÓN INICIAL</span></div>
+        <div class="hero-stat">
+          <div><small>PLATAFORMA DE ANÁLISIS</small><h2>El fútbol, con más contexto.</h2></div>
+          <div class="gold-orb">FI</div>
+        </div>
+        <div class="mini-grid">
+          <div class="mini-card"><span class="mini-icon">↗</span><small>FORMA RECIENTE</small><strong>En preparación</strong><span class="muted">Se conectarán datos reales</span></div>
+          <div class="mini-card"><span class="mini-icon">◎</span><small>COMPARACIÓN</small><strong>En preparación</strong><span class="muted">Equipos y competiciones</span></div>
+        </div>
+        <div class="panel-note"><span class="note-line"></span> Sin promesas de resultados. Solo análisis.</div>
+      </div>
+    </section>
+
+    <section class="section" id="partidos">
+      <div class="section-heading">
+        <div><div class="eyebrow">CENTRO DE PARTIDOS</div><h2>Explora el fútbol</h2><p class="muted">Esta primera maqueta todavía no está conectada a una API de resultados.</p></div>
+        <div class="date-chip" id="todayLabel">Cargando fecha…</div>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar equipo o competición" aria-label="Buscar equipo o competición"></label>
+        <select id="leagueFilter" aria-label="Filtrar competición"><option value="all">Todas las competiciones</option><option value="Premier League">Premier League</option><option value="La Liga">La Liga</option><option value="Serie A">Serie A</option></select>
+      </div>
+      <div class="demo-banner"><span>i</span><div><strong>Vista de demostración</strong><p>Los ejemplos que aparecen abajo son ficticios y sirven únicamente para probar el diseño.</p></div></div>
+      <div class="match-list" id="matchList"></div>
+      <div class="empty-state hidden" id="emptyState">No encontramos coincidencias. Prueba con otro equipo o filtro.</div>
+    </section>
+
+    <section class="section analysis-section" id="analisis">
+      <div class="section-heading"><div><div class="eyebrow">MÉTODO FOOTINTEL</div><h2>Más que una predicción</h2></div></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01</span><div class="feature-icon">▤</div><h3>Estadísticas</h3><p>Forma reciente, goles, rendimiento local/visitante y datos disponibles por competición.</p></article>
+        <article class="feature-card"><span class="feature-number">02</span><div class="feature-icon">⌁</div><h3>Mercados</h3><p>Exploración progresiva de 1X2, doble oportunidad, goles, ambos marcan y otros mercados cuando haya datos suficientes.</p></article>
+        <article class="feature-card"><span class="feature-number">03</span><div class="feature-icon">◈</div><h3>Probabilidades</h3><p>Estimaciones que deberán validarse con resultados históricos. Ningún modelo garantiza aciertos.</p></article>
+      </div>
+    </section>
+
+    <section class="builder section" id="crear">
+      <div class="builder-copy"><div class="eyebrow">TU ESPACIO DE ANÁLISIS</div><h2>Construye tu selección.</h2><p>El generador de apuestas estará disponible cuando conectemos los partidos y sus mercados reales.</p><ul><li>Selecciona partidos y mercados</li><li>Revisa cuotas y probabilidades disponibles</li><li>Comprueba el riesgo de una combinada</li></ul></div>
+      <div class="builder-card"><div class="builder-icon">＋</div><h3>Crear apuesta</h3><p>Esta función se activará en una próxima versión.</p><button class="button button-gold full-width" id="createBetButton">Próximamente <span>→</span></button><small id="builderMessage" class="muted"></small></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">FI</span><span><strong>FootIntel</strong><small>FOOTBALL INTELLIGENCE</small></span></a><p>Herramienta informativa de análisis deportivo. No garantiza resultados ni beneficios.</p><span class="copyright">© <span id="year"></span> FootIntel</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
